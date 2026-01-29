@@ -833,8 +833,9 @@ class BNO08X:
             while len(self._packet_slices) > 0:
                 self._process_report(*self._packet_slices.pop())
         except Exception as error:
-            print(packet)
+            # print(packet)
             # raise error
+            pass
 
     def _handle_control_report(self, report_id: int, report_bytes: bytearray) -> None:
         if report_id == _SHTP_REPORT_PRODUCT_ID_RESPONSE:
