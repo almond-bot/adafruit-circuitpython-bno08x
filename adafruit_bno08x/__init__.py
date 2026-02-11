@@ -498,7 +498,7 @@ class BNO08X:
         self._id_read = False
         # for saving the most recent reading when decoding several packets
         self._readings: dict[int, Any] = {}
-        self.initialize()
+        # self.initialize()
 
     def initialize(self) -> None:
         """Initialize the sensor"""
